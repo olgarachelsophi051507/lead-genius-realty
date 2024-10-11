@@ -1,0 +1,71 @@
+/* Asegura que la cabecera esté alineada y centrada */
+.header {
+  text-align: center;
+  color: #1a237e; /* Azul navy para título y subtítulo */
+  margin-bottom: 30px;
+}
+
+/* Título principal */
+.header h1 {
+  font-size: 3rem; /* Tamaño de fuente grande para el título */
+  font-weight: bold;
+  color: #1a237e; /* Azul navy */
+}
+
+/* Subtítulo alineado al centro */
+.header .sub-header {
+  font-size: 1.5rem;
+  color: #1a237e; /* Azul navy */
+  margin-top: 10px;
+}
+
+/* Contenedor de los botones de la cabecera */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Diseño de botones */
+.btn-primary, .btn-secondary, .btn-tertiary {
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover {
+  background-color: #3949ab;
+}
+
+/* Estilo de la sección de servicios */
+.service-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+/* Grid de servicios */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Bloques en filas de 4 */
+  gap: 20px;
+  padding: 0 10%;
+}
+
+/* Bloques de servicio */
+.service-block {
+  background-color: #1a237e; /* Azul navy */
+  color: white; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.service-block:hover {
+  transform: translateY(-5px); /* Animación en hover */
+}

@@ -1,0 +1,9 @@
+<div class="property-list">
+    <h2>Propiedades del MLS</h2>
+    <ul>
+      <li *ngFor="let property of properties" (click)="viewDetails(property.id)">
+        {{ property.address }} - {{ property.price }}
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div class="report-list">
+    <h2>Reportes Personalizados</h2>
+    <button (click)="generateReport()">Generar Reporte</button>
+    <ul>
+      <li *ngFor="let report of reports">
+        {{ report.title }} - {{ report.date }}
+      </li>
+    </ul>
+  </div>
+  

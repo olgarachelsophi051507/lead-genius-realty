@@ -1,0 +1,10 @@
+<div class="reminder-list">
+    <h2>Recordatorios de Seguimiento</h2>
+    <button (click)="createReminder()">Agregar Recordatorio</button>
+    <ul>
+      <li *ngFor="let reminder of reminders">
+        {{ reminder.description }} - {{ reminder.date }}
+      </li>
+    </ul>
+  </div>
+  

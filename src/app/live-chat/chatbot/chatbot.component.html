@@ -1,0 +1,9 @@
+<div class="chat-interface">
+    <h2>Chat en Vivo</h2>
+    <div class="chat-window">
+      <p *ngFor="let message of messages">{{ message }}</p>
+    </div>
+    <input [(ngModel)]="userMessage" placeholder="Escribe un mensaje..." />
+    <button (click)="sendMessage()">Enviar</button>
+  </div>
+  
