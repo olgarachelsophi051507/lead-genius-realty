@@ -1,5 +1,6 @@
 // src/app/app.component.ts
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +9,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   services = [
-    { name: 'Gestión de Leads', description: 'Administra tus contactos y etapas de clientes.' },
-    { name: 'Campañas de Facebook Ads', description: 'Crea y administra campañas publicitarias.' },
-    { name: 'Integración con WhatsApp', description: 'Mantén contacto directo con tus clientes.' },
-    { name: 'Email Marketing', description: 'Envía campañas de marketing personalizadas.' },
-    { name: 'Landing Pages Personalizadas', description: 'Diseña y publica páginas de aterrizaje únicas.' },
-    { name: 'Hojas de Cálculo Dinámicas', description: 'Calcula ingresos de cada agente con precisión.' },
-    { name: 'Integración con Instagram', description: 'Publica anuncios de propiedades directamente.' },
-    { name: 'Análisis Predictivo de Precios', description: 'Predice precios y tendencias del mercado.' },
-    { name: 'Mapa Interactivo de Propiedades', description: 'Explora propiedades en un mapa 3D.' },
-    { name: 'Asistente Virtual 24/7', description: 'Chatbot de IA para asistencia continua.' },
-    { name: 'Gestión de Documentos Digitales', description: 'Organiza y firma documentos digitalmente.' },
-    { name: 'Calculadora de Hipoteca y ROI', description: 'Calcula hipotecas y retorno de inversión.' },
+    { name: 'SERVICE_LEADS', description: 'SERVICE_LEADS_DESC' },
+    { name: 'SERVICE_FACEBOOK_ADS', description: 'SERVICE_FACEBOOK_ADS_DESC' },
+    { name: 'SERVICE_WHATSAPP', description: 'SERVICE_WHATSAPP_DESC' },
+    { name: 'SERVICE_EMAIL_MARKETING', description: 'SERVICE_EMAIL_MARKETING_DESC' },
+    { name: 'SERVICE_LANDING_PAGES', description: 'SERVICE_LANDING_PAGES_DESC' },
+    { name: 'SERVICE_SPREADSHEETS', description: 'SERVICE_SPREADSHEETS_DESC' },
+    { name: 'SERVICE_INSTAGRAM', description: 'SERVICE_INSTAGRAM_DESC' },
+    { name: 'SERVICE_PRICE_PREDICTION', description: 'SERVICE_PRICE_PREDICTION_DESC' },
+    { name: 'SERVICE_MAP', description: 'SERVICE_MAP_DESC' },
+    { name: 'SERVICE_VIRTUAL_ASSISTANT', description: 'SERVICE_VIRTUAL_ASSISTANT_DESC' },
+    { name: 'SERVICE_DOCUMENT_MANAGEMENT', description: 'SERVICE_DOCUMENT_MANAGEMENT_DESC' },
+    { name: 'SERVICE_MORTGAGE_CALCULATOR', description: 'SERVICE_MORTGAGE_CALCULATOR_DESC' }
   ];
+
+  constructor(private translate: TranslateService) {
+    // Establece el idioma por defecto
+    this.translate.setDefaultLang('en');
+  }
+
+  // Cambiar idioma
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

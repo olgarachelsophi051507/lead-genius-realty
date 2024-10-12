@@ -14,7 +14,6 @@
   <section class="service-section">
     <h2>{{ 'SERVICES_TITLE' | translate }}</h2>
     <div class="service-grid">
-      <!-- Bloques para cada servicio -->
       <div class="service-block" *ngFor="let service of services">
         <h3>{{ service.name | translate }}</h3>
         <p>{{ service.description | translate }}</p>
