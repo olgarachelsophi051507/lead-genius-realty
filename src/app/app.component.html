@@ -1,91 +1,100 @@
-<!-- src/app/app.component.html -->
 <div class="main-container">
+  <!-- Encabezado -->
   <header class="header">
-    <h1>LeadGeniusRealty</h1>
-    <p class="sub-header">Esta plataforma revoluciona el mundo inmobiliario</p>
+    <h1>{{ 'APP_TITLE' | translate }}</h1>
+    <p class="sub-header">{{ 'APP_SUBTITLE' | translate }}</p>
     <div class="button-container">
-      <button class="btn-primary">Sign In</button>
-      <button class="btn-secondary">Sign Up</button>
-      <button class="btn-tertiary">Get Started</button>
+      <button mat-raised-button color="primary">{{ 'SIGN_IN' | translate }}</button>
+      <button mat-raised-button color="accent">{{ 'SIGN_UP' | translate }}</button>
+      <button mat-raised-button color="warn">{{ 'GET_STARTED' | translate }}</button>
     </div>
   </header>
 
+  <!-- Servicios -->
   <section class="service-section">
-    <h2>Nuestros Servicios</h2>
+    <h2>{{ 'SERVICES_TITLE' | translate }}</h2>
     <div class="service-grid">
-      <!-- Bloques de servicios en una cuadrícula de 4x4 -->
-      <div class="service-block color-navy">
-        <h3>Gestión de Leads</h3>
-        <p>Administra tus contactos y etapas de clientes.</p>
-      </div>
-      <div class="service-block color-orange">
-        <h3>Campañas de Facebook Ads</h3>
-        <p>Crea y administra campañas publicitarias.</p>
-      </div>
-      <div class="service-block color-violet">
-        <h3>Integración con WhatsApp</h3>
-        <p>Mantén contacto directo con tus clientes.</p>
-      </div>
-      <div class="service-block color-pink">
-        <h3>Email Marketing</h3>
-        <p>Envía campañas de marketing personalizadas.</p>
-      </div>
-      <div class="service-block color-mustard">
-        <h3>Landing Pages Personalizadas</h3>
-        <p>Diseña y publica páginas de aterrizaje únicas.</p>
-      </div>
-      <div class="service-block color-navy">
-        <h3>Hojas de Cálculo Dinámicas</h3>
-        <p>Calcula ingresos de cada agente con precisión.</p>
-      </div>
-      <div class="service-block color-orange">
-        <h3>Integración con Instagram</h3>
-        <p>Publica anuncios de propiedades directamente.</p>
-      </div>
-      <div class="service-block color-violet">
-        <h3>Integraciones con Zapier y Mailchimp</h3>
-        <p>Conecta con servicios externos de automatización.</p>
-      </div>
-      <div class="service-block color-pink">
-        <h3>Análisis Predictivo de Precios</h3>
-        <p>Predice precios y tendencias del mercado.</p>
-      </div>
-      <div class="service-block color-mustard">
-        <h3>Mapa Interactivo de Propiedades</h3>
-        <p>Explora propiedades en un mapa 3D.</p>
-      </div>
-      <div class="service-block color-navy">
-        <h3>Asistente Virtual 24/7</h3>
-        <p>Chatbot de IA para asistencia continua.</p>
-      </div>
-      <div class="service-block color-orange">
-        <h3>Gestión de Documentos Digitales</h3>
-        <p>Organiza y firma documentos digitalmente.</p>
-      </div>
-      <div class="service-block color-violet">
-        <h3>Calculadora de Hipoteca y ROI</h3>
-        <p>Calcula hipotecas y retorno de inversión.</p>
-      </div>
-      <div class="service-block color-pink">
-        <h3>Seguimiento de Leads</h3>
-        <p>Recibe notificaciones sobre tus leads.</p>
-      </div>
-      <div class="service-block color-mustard">
-        <h3>Integración con MLS</h3>
-        <p>Accede a listados de propiedades en tiempo real.</p>
-      </div>
-      <div class="service-block color-navy">
-        <h3>Realidad Aumentada para Recorridos</h3>
-        <p>Visitas inmersivas de propiedades en RA.</p>
-      </div>
-      <div class="service-block color-orange">
-        <h3>Marketplace de Servicios Complementarios</h3>
-        <p>Encuentra servicios adicionales para tus clientes.</p>
-      </div>
-      <div class="service-block color-violet">
-        <h3>Generador Automático de Propuestas</h3>
-        <p>Crea propuestas personalizadas para vendedores.</p>
+      <!-- Bloques para cada servicio -->
+      <div class="service-block" *ngFor="let service of services">
+        <h3>{{ service.name | translate }}</h3>
+        <p>{{ service.description | translate }}</p>
       </div>
     </div>
   </section>
+
+  <!-- Sección Adicional de Información -->
+  <section class="additional-info">
+    <h2>{{ 'WHY_CHOOSE_US' | translate }}</h2>
+    <p>{{ 'WHY_CHOOSE_US_DESC' | translate }}</p>
+    <ul>
+      <li><strong>{{ 'AUTOMATION_TITLE' | translate }}:</strong> {{ 'AUTOMATION_DESC' | translate }}</li>
+      <li><strong>{{ 'USER_INTERFACE_TITLE' | translate }}:</strong> {{ 'USER_INTERFACE_DESC' | translate }}</li>
+      <li><strong>{{ 'SUPPORT_TITLE' | translate }}:</strong> {{ 'SUPPORT_DESC' | translate }}</li>
+    </ul>
+    <div class="cta-buttons">
+      <button mat-raised-button color="primary">{{ 'LEARN_MORE' | translate }}</button>
+      <button mat-raised-button color="accent">{{ 'SCHEDULE_DEMO' | translate }}</button>
+    </div>
+  </section>
+
+  <!-- Estadísticas Destacadas -->
+  <section class="highlights">
+    <h2>{{ 'HIGHLIGHTS_TITLE' | translate }}</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <h3>1,000+</h3>
+        <p>{{ 'AGENTS_SATISFIED' | translate }}</p>
+      </div>
+      <div class="highlight-card">
+        <h3>80%</h3>
+        <p>{{ 'WORK_AUTOMATION' | translate }}</p>
+      </div>
+      <div class="highlight-card">
+        <h3>5+</h3>
+        <p>{{ 'SOCIAL_INTEGRATIONS' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials">
+    <h2>{{ 'TESTIMONIALS' | translate }}</h2>
+    <div class="testimonial">
+      <p>"{{ 'TESTIMONIAL_TEXT' | translate }}"</p>
+      <p><strong>- {{ 'TESTIMONIAL_AUTHOR' | translate }}</strong></p>
+    </div>
+  </section>
+
+  <!-- Video de Introducción -->
+  <section class="intro-video">
+    <h2>{{ 'WANT_TO_KNOW_MORE' | translate }}</h2>
+    <div class="video-thumbnail">
+      <img src="/assets/video-thumbnail.jpg" alt="{{ 'VIDEO_THUMBNAIL_ALT' | translate }}">
+      <button class="btn-play">▶️</button>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>{{ 'FAQ_TITLE' | translate }}</h2>
+    <div class="faq-item">
+      <h3>{{ 'FAQ_AUTOMATION_TITLE' | translate }}</h3>
+      <p>{{ 'FAQ_AUTOMATION_DESC' | translate }}</p>
+    </div>
+    <div class="faq-item">
+      <h3>{{ 'FAQ_SOCIAL_TITLE' | translate }}</h3>
+      <p>{{ 'FAQ_SOCIAL_DESC' | translate }}</p>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <p>&copy; 2024 LeadGeniusRealty. {{ 'COPYRIGHT' | translate }}</p>
+    <div class="social-links">
+      <a href="#"><img src="/assets/icon-facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="/assets/icon-twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="/assets/icon-instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="/assets/icon-linkedin.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
 </div>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ChatbotComponent {
   messages: string[] = [];
-  userMessage: string = '';
+  userMessage = '';
 
   sendMessage(): void {
     this.messages.push(this.userMessage);

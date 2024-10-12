@@ -1,71 +1,72 @@
-/* Asegura que la cabecera esté alineada y centrada */
-.header {
-  text-align: center;
-  color: #1a237e; /* Azul navy para título y subtítulo */
-  margin-bottom: 30px;
-}
-
-/* Título principal */
-.header h1 {
-  font-size: 3rem; /* Tamaño de fuente grande para el título */
-  font-weight: bold;
-  color: #1a237e; /* Azul navy */
-}
-
-/* Subtítulo alineado al centro */
-.header .sub-header {
-  font-size: 1.5rem;
-  color: #1a237e; /* Azul navy */
-  margin-top: 10px;
-}
-
-/* Contenedor de los botones de la cabecera */
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-/* Diseño de botones */
-.btn-primary, .btn-secondary, .btn-tertiary {
-  background-color: #1a237e;
+.main-container {
+  background: url('/assets/fondo-animado.jpg') no-repeat center center / cover;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover {
-  background-color: #3949ab;
-}
-
-/* Estilo de la sección de servicios */
-.service-section h2 {
+  padding: 20px;
   text-align: center;
-  font-size: 2rem;
-  color: #1a237e;
-  margin-bottom: 20px;
 }
 
-/* Grid de servicios */
+.header h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #002f6c; /* Azul navy */
+}
+
+.sub-header {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #002f6c; /* Azul navy */
+}
+
+.button-container button {
+  margin: 0.5em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-tertiary {
+  background-color: #28a745;
+  color: white;
+}
+
+.service-section h2 {
+  font-size: 2em;
+  margin: 1em 0;
+  color: #ff851b;
+}
+
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Bloques en filas de 4 */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  padding: 0 10%;
+  margin-top: 30px;
 }
 
-/* Bloques de servicio */
 .service-block {
-  background-color: #1a237e; /* Azul navy */
-  color: white; /* Texto en blanco */
-  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
   border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
+  color: white;
 }
+
 .service-block:hover {
-  transform: translateY(-5px); /* Animación en hover */
+  transform: scale(1.05);
+}
+
+.service-block h3 {
+  color: #f8f9fa;
+}
+
+.service-block p {
+  color: #ced4da;
 }

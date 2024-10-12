@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   standalone: true, // Asegúrate de que tenga esta propiedad
 })
 export class DonutChartComponent {
-  @Input() value: number = 0;
+  @Input() value = 0;
 }
