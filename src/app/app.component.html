@@ -1,5 +1,7 @@
-<div class="main-container">
+I<div class="main-container">
   <!-- Encabezado -->
+  <!-- PROBLEMA: Error "No pipe found with name 'translate'" -->
+  <!-- SOLUCIÓN: Verificar que TranslateModule está correctamente configurado en app.module.ts -->
   <header class="header">
     <h1>{{ 'APP_TITLE' | translate }}</h1>
     <p class="sub-header">{{ 'APP_SUBTITLE' | translate }}</p>
@@ -97,3 +99,8 @@
     </div>
   </footer>
 </div>
+
+<!-- Test de Traducción -->
+<!-- Este test es para verificar que el pipe 'translate' funcione correctamente -->
+<h1>{{ 'TEST' | translate }}</h1>
+
