@@ -1,4 +1,3 @@
-// src/app/app.component.ts
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -24,8 +23,8 @@ export class AppComponent {
   ];
 
   constructor(private translate: TranslateService) {
-    // Establece el idioma por defecto
-    this.translate.setDefaultLang('en');
+    // Establece el idioma predeterminado
+    this.translate.setDefaultLang('en'); // Cambia a 'es' si prefieres español como predeterminado
   }
 
   // Cambiar idioma

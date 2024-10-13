@@ -2,12 +2,13 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-campaign-content',
   templateUrl: './campaign-content.component.html',
   styleUrls: ['./campaign-content.component.css']
 })
 export class CampaignContentComponent {
-  title = 'Hi Lauren, welcome to your personal offers and streaming bundles.';
-  description = 'Nurture prospect and customer relationships with premade, customizable email templates that match your brand. Use built-in analytics to review performance and deliver effective marketing content.';
-  imageUrl = 'https://via.placeholder.com/150'; // URL de la imagen
+  imageUrl = '/assets/default-image.jpg'; // Ruta de imagen predeterminada
+  title = 'Campaign Title'; // Título predeterminado
+  description = 'This is a sample campaign description.'; // Descripción predeterminada
 }

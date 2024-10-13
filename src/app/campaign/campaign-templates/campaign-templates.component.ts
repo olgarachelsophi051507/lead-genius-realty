@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: true, // Asegúrate de que esto esté configurado
   selector: 'app-campaign-templates',
-  standalone: true,
-  imports: [],
   templateUrl: './campaign-templates.component.html',
-  styleUrl: './campaign-templates.component.css'
+  styleUrls: ['./campaign-templates.component.css']
 })
-export class CampaignTemplatesComponent {
-
-}
+export class CampaignTemplatesComponent { }

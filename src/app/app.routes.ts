@@ -7,6 +7,5 @@ import { CampaignContentComponent } from './campaign/campaign-content/campaign-c
 export const APP_ROUTES: Routes = [
   { path: '', component: AppComponent },
   { path: 'campaign-templates', component: CampaignTemplatesComponent },
-  { path: 'campaign-content', component: CampaignContentComponent },
-  // Agrega otras rutas necesarias
+  { path: 'campaign-content', component: CampaignContentComponent }
 ];
